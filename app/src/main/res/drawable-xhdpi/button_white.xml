@@ -1,0 +1,9 @@
+<!-- button.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/white" />
+    <stroke android:color="@color/color_line_gray" android:width="0.5dp" />
+    <padding android:left="3dp" android:right="3dp"
+             android:top="6dp" android:bottom="6dp" />
+    <corners android:radius="25dp" />
+
+</shape>

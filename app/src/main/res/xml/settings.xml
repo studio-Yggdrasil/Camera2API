@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="후면카메라" >
+        <Preference
+            android:title="사진 크기"
+            android:key="SizeCamera0"
+            android:summary="">
+        <intent
+            android:targetClass="yggdrasil.camerasee.settings.SizeCamera0"
+            android:targetPackage="yggdrasil.camerasee" />
+        </Preference>
+        <Preference
+            android:title="동영상 크기">
+
+        </Preference>
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="saveRAW"
+            android:title="RAW 및 JPEG 파일 함께 저장"
+            android:summaryOn="촬영된 사진을 저장할 때 RAW 파일을 함께 저장합니다."
+            android:summaryOff="촬영된 사진을 저장할 때 RAW 파일을 저장하지 않습니다."/>
+
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="전면카메라" >
+
+        <Preference
+            android:title="사진 크기"
+            android:key="SizeCamera1"
+            android:summary="">
+            <intent
+                android:targetClass="yggdrasil.camerasee.settings.SizeCamera1"
+                android:targetPackage="yggdrasil.camerasee" />
+        </Preference>
+        <Preference
+            android:title="동영상 크기">
+
+        </Preference>
+
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="일반 설정" >
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="useOIS"
+            android:title="손떨림 보정 사용"
+            android:summaryOn="사진과 동영상을 촬영할 때 손떨림을 보정합니다."
+            android:summaryOff="사진과 동영상을 촬영할 때 손떨림을 보정하지 않습니다."/>
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="SoundShutter"
+            android:title="촬영소리 사용"
+            android:summaryOn="사진을 촬영할 때 소리가 납니다."
+            android:summaryOff="사진을 촬영할 때 소리를 내지 않습니다."/>
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="SoundFocus"
+            android:title="초점소리 사용"
+            android:summaryOn="초점을 맞출 때 소리가 납니다."
+            android:summaryOff="초점을 맞출 때 소리를 내지 않습니다."/>
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="TagGPS"
+            android:title="위치 태그"
+            android:summaryOn="사진 및 동영상에 위치정보를 저장합니다."
+            android:summaryOff="사진 및 동영상에 위치정보를 저장하지 않습니다."/>
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="Photo Preview"
+            android:title="사진 촬영 후 바로보기"
+            android:summaryOn="사진을 촬영한 후 바로 확인합니다."
+            android:summaryOff="사진을 촬영할 후 확인하지 않습니다."/>
+        <Preference
+            android:title="설정 초기화"
+            android:summary="모든 환경설정을 초기상태로 설정합니다.">
+            <intent
+                android:targetClass="studioyggdrasil.camerasee.settings.Personal"
+                android:targetPackage="studioyggdrasil.onepnu" />
+        </Preference>
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="정책 및 라이센스" >
+
+        <Preference
+            android:title="개인정보 처리방침" >
+            <intent
+                android:targetClass="yggdrasil.camerasee.settings.Personal"
+                android:targetPackage="yggdrasil.camerasee" />
+        </Preference>
+        <Preference
+            android:title="오픈소스 라이센스" >
+            <intent
+                android:targetClass="yggdrasil.camerasee.settings.OpenSauce"
+                android:targetPackage="yggdrasil.camerasee" />
+        </Preference>
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="어플리케이션 정보" >
+
+        <Preference
+            android:title="사용방법"
+            android:summary="어플리케이션 사용방법을 알아봅니다.">
+            <intent
+                android:targetClass="yggdrasil.camerasee.welcome.WelcomeActivityAlltime"
+                android:targetPackage="yggdrasil.camerasee" />
+        </Preference>
+
+        <Preference
+            android:summary="개발자에게 메일을 보냅니다."
+            android:title="문의하기" >
+            <intent
+                android:action="android.intent.action.SENDTO"
+                android:data="mailto:admin@yggdrasil.co" />
+        </Preference>
+        <Preference
+            android:title="어플리케이션 버전"
+            android:summary="@string/version">
+            <intent
+                android:targetClass="yggdrasil.camerasee.settings.Version"
+                android:targetPackage="yggdrasil.camerasee" />
+        </Preference>
+
+    </PreferenceCategory>
+</PreferenceScreen>
